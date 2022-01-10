@@ -1020,7 +1020,7 @@
     <decision name="context_014" id="_context_014">
         <variable name="context_014"/>
         <literalExpression>
-            <text>{a: "foo", b: "bar"} instance of t_context_013</text>
+            <text>{a: "foo", b: "bar", c: "baz"} instance of t_context_013</text>
         </literalExpression>
     </decision>
 
@@ -1349,4 +1349,3 @@
 
 
 </definitions>
-
