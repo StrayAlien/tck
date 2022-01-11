@@ -144,7 +144,7 @@
 <!--    <dmn:decision name="null_011" id="_null_011">
         <dmn:variable name="null_011"/>
         <dmn:literalExpression>
-            &lt;!&ndash; context<dmn:> &ndash;&gt;
+            &lt;!&ndash; context<> &ndash;&gt;
             <dmn:text>null instance of context&lt;&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>-->
@@ -649,7 +649,7 @@
     <dmn:decision name="list_008" id="_list_008">
         <dmn:variable name="list_008"/>
         <dmn:literalExpression>
-            <!-- list<dmn:Any>-->
+            <!-- list<Any>-->
             <dmn:text>[1,2,3] instance of list&lt;Any&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -727,7 +727,7 @@
     <dmn:decision name="list_018" id="_list_018">
         <dmn:variable name="list_018"/>
         <dmn:literalExpression>
-            <!-- list<dmn:t_context_013>-->
+            <!-- list<t_context_013>-->
             <dmn:text>[{a: "a", b: "b"}] instance of list&lt;t_context_013&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -735,7 +735,7 @@
     <dmn:decision name="list_019" id="_list_019">
         <dmn:variable name="list_019"/>
         <dmn:literalExpression>
-            <!-- list<dmn:t_context_013>-->
+            <!-- list<t_context_013>-->
             <dmn:text>[{a: "a"}] instance of list&lt;t_context_013&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -743,7 +743,7 @@
     <dmn:decision name="list_020" id="_list_020">
         <dmn:variable name="list_020"/>
         <dmn:literalExpression>
-            <!-- list<dmn:context<dmn:a: string, b: string>>-->
+            <!-- list<context<a: string, b: string>>-->
             <dmn:text>[{a: "a", b: "b"}] instance of list&lt;context&lt;a: string, b: string&gt;&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -751,7 +751,7 @@
     <dmn:decision name="list_021" id="_list_021">
         <dmn:variable name="list_021"/>
         <dmn:literalExpression>
-            <!-- list<dmn:function<dmn:string, string> -> number>> -->
+            <!-- list<function<string, string> -> number>> -->
             <dmn:text>[(function(a:string, b:string) 1), (function(a:string, b:string) 2)] instance of list&lt;function&lt;string, string&gt;-&gt;number&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1050,7 +1050,7 @@
         <dmn:variable name="context_018"/>
         <dmn:literalExpression>
             <!-- true -->
-            <!-- {a: "foo"} instance of context<dmn:a: string> -->
+            <!-- {a: "foo"} instance of context<a: string> -->
             <dmn:text>{a: "foo"} instance of context&lt;a: string&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1059,7 +1059,7 @@
         <dmn:variable name="context_019"/>
         <dmn:literalExpression>
             <!-- true -->
-            <!-- {a: null} instance of context<dmn:a: string> -->
+            <!-- {a: null} instance of context<a: string> -->
             <dmn:text>{a: null} instance of context&lt;a: string&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1068,7 +1068,7 @@
         <dmn:variable name="context_020"/>
         <dmn:literalExpression>
             <!-- true -->
-            <!-- {a: "123", b: 123} instance of context<dmn:a: string> -->
+            <!-- {a: "123", b: 123} instance of context<a: string> -->
             <dmn:text>{a: "123", b: 123} instance of context&lt;a: string&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1077,7 +1077,7 @@
         <dmn:variable name="context_021"/>
         <dmn:literalExpression>
             <!-- true -->
-            <!-- {a: "123", b: 123} instance of context<dmn:a: string, b: number> -->
+            <!-- {a: "123", b: 123} instance of context<a: string, b: number> -->
             <dmn:text>{a: "123", b: 123} instance of context&lt;a: string, b: number&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1086,7 +1086,7 @@
         <dmn:variable name="context_022"/>
         <dmn:literalExpression>
             <!-- false -->
-            <!-- {a: "123"} instance of context<dmn:a: number> -->
+            <!-- {a: "123"} instance of context<a: number> -->
             <dmn:text>{a: "123"} instance of context&lt;a: number&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1095,7 +1095,7 @@
         <dmn:variable name="context_023"/>
         <dmn:literalExpression>
             <!-- true -->
-            <!-- {a: {b: 123}} instance of context<dmn:a: context<dmn:b: number>> -->
+            <!-- {a: {b: 123}} instance of context<a: context<b: number>> -->
             <dmn:text>{a: {b: 123}} instance of context&lt;a: context&lt;b: number&gt;&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1104,7 +1104,7 @@
         <dmn:variable name="context_024"/>
         <dmn:literalExpression>
             <!-- false -->
-            <!-- {a: {b: 123}} instance of context<dmn:a: context<dmn:b: string>> -->
+            <!-- {a: {b: 123}} instance of context<a: context<b: string>> -->
             <dmn:text>{a: {b: 123}} instance of context&lt;a: context&lt;b: string&gt;&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1207,7 +1207,7 @@
         <dmn:variable name="function_014"/>
         <dmn:literalExpression>
             <!-- true: equivalent parm, covariant return type -->
-            <!-- (function(a: list<dmn:number>) {b: "b", c: "c", d: "d"}) instance of function<dmn:list<dmn:number>> -> context<dmn:b: string, c: string> -->
+            <!-- (function(a: list<number>) {b: "b", c: "c", d: "d"}) instance of function<list<number>> -> context<b: string, c: string> -->
             <dmn:text>(function(a: list&lt;number&gt;) {b: "b", c: "c", d: "d"}) instance of function&lt;list&lt;number&gt;&gt;-&gt;context&lt;b: string, c: string&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1216,7 +1216,7 @@
         <dmn:variable name="function_015"/>
         <dmn:literalExpression>
             <!-- false: equivalent parm, non-covariant return type -->
-            <!-- (function(a: list<dmn:number>) {b: "b"}) instance of function<dmn:list<dmn:number>> -> context<dmn:b: string, c: string> -->
+            <!-- (function(a: list<number>) {b: "b"}) instance of function<list<number>> -> context<b: string, c: string> -->
             <dmn:text>(function(a: list&lt;number&gt;) {b: "b"}) instance of function&lt;list&lt;number&gt;&gt;-&gt;context&lt;b: string, c: string&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1225,7 +1225,7 @@
         <dmn:variable name="function_016"/>
         <dmn:literalExpression>
             <!-- true: contravariant parm, covariant return type -->
-            <!-- (function(a: context<dmn:a: string>) {b: "b", c: "c"}) instance of function<dmn:context<dmn:a: string, b: string> -> context<dmn:b: string> -->
+            <!-- (function(a: context<a: string>) {b: "b", c: "c"}) instance of function<context<a: string, b: string> -> context<b: string> -->
             <dmn:text>(function(a: context&lt;a: string&gt;) {b: "b", c: "c"}) instance of function&lt;context&lt;a: string, b: string&gt;&gt;-&gt;context&lt;b: string&gt;</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1234,7 +1234,7 @@
         <dmn:variable name="function_017"/>
         <dmn:literalExpression>
             <!-- false: non-contravariant parm, equivalent return type -->
-            <!-- (function(a: context<dmn:a: string, b: string>) "foo") instance of function<dmn:context<dmn:a: string> -> string -->
+            <!-- (function(a: context<a: string, b: string>) "foo") instance of function<context<a: string> -> string -->
             <dmn:text>(function(a: context&lt;a: string, b: string&gt;) "foo") instance of function&lt;context&lt;a: string&gt;&gt;-&gt;string</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1243,7 +1243,7 @@
         <dmn:variable name="function_018"/>
         <dmn:literalExpression>
             <!-- true: contravariant parm, equivalent return type, same param arity -->
-            <!-- (function(a: string, b: number> "foo") instance of function<dmn:string, number> -> string -->
+            <!-- (function(a: string, b: number> "foo") instance of function<string, number> -> string -->
             <dmn:text>(function(a: string, b: number) "foo") instance of function&lt;string, number&gt;-&gt;string</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1252,7 +1252,7 @@
         <dmn:variable name="function_019"/>
         <dmn:literalExpression>
             <!-- false: contravariant parm, equivalent return type, different param arity -->
-            <!-- (function(a: string, b: string> "foo") instance of function<dmn:string> -> string -->
+            <!-- (function(a: string, b: string> "foo") instance of function<string> -> string -->
             <dmn:text>(function(a: string, b: string) "foo") instance of function&lt;string&gt;-&gt;string</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1261,7 +1261,7 @@
         <dmn:variable name="function_020"/>
         <dmn:literalExpression>
             <!-- true: multiple contravariant parms, equivalent return type -->
-            <!-- (function(a: context<dmn:a: string>, b: context<dmn:a: string, b: string>> "foo") instance of function<dmn:context<dmn:a: string, b: string>, context<dmn:a: string, b: string, c: string>> -> string -->
+            <!-- (function(a: context<a: string>, b: context<a: string, b: string>> "foo") instance of function<context<a: string, b: string>, context<a: string, b: string, c: string>> -> string -->
             <dmn:text>(function(a: context&lt;a: string&gt;, b: context&lt;a: string, b: string&gt;) "foo") instance of function&lt;context&lt;a: string, b: string&gt;,context&lt;a: string, b: string, c: string&gt;&gt;-&gt;string</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
@@ -1320,7 +1320,7 @@
     <dmn:decision name="function_028" id="_function_028">
         <dmn:variable name="function_028"/>
         <dmn:literalExpression>
-            <!-- true, not false.  The LHS list type is list<dmn:function<dmn:string, Any> -> string> which makes the 'b' param
+            <!-- true, not false.  The LHS list type is list<function<string, Any> -> string> which makes the 'b' param
             contravariant to the b 'number' type in tListOfFunctions   -->
             <dmn:text>[(function(a: string, b: number) "123"), (function(c: string, d: string) "456")] instance of tListOfFunctions</dmn:text>
         </dmn:literalExpression>
